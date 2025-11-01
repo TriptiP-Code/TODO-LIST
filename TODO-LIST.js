@@ -1,4 +1,4 @@
-    const mainTodoElem = document.querySelector(".todo-lists-elem");
+const mainTodoElem = document.querySelector(".todo-lists-elem");
     const inputValue = document.getElementById("inputValue");
 
     
@@ -18,7 +18,7 @@
     const addTodoDynamicElement =(element) => {
         const divElement = document.createElement("div");
         divElement.classList.add("main_todo_div");
-        divElement.innerHTML = `<li> ${element}</li>   <button class="deleteBtn" > DELETE</button>`;
+        divElement.innerHTML = `<li> ${element }</li>   <button class="deleteBtn" > DELETE</button>`;
         mainTodoElem.append(divElement);
 
     }
@@ -48,8 +48,7 @@
         divElement.classList.add("main_todo_div");
         divElement.innerHTML = `<li> ${inputValue.value }</li>   <button class="deleteBtn" > DELETE</button>`;
         mainTodoElem.append(divElement);
-        inputValue.value=" ";
-    }
+        inputValue.value=" ";}
     };
 
     const showTodoList = () =>{
@@ -84,13 +83,9 @@
  
 mainTodoElem.addEventListener('click' , (e) => {
     e.preventDefault();
-    //  console.log(e.target.classList.contains("deleteBtn"));
-    if(e.target.classList.contains("deleteBtn")){
-        removeTodoElem(e);
-    }
-    
+    removeTodoElem(e);
 
-});
+})
    document.querySelector(".btn").addEventListener("click" , (e) => {
-    addTodoList(e);
+        addTodoList(e);
     });
