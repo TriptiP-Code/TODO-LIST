@@ -1,0 +1,135 @@
+/* General page styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f8cdda, #1d2b64);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #fff;
+  margin: 0;
+}
+
+/* Header styling */
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Form container */
+form div {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Input box */
+#inputValue {
+  width: 250px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+#inputValue:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Add button */
+.btn {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Todo list section */
+.todo-lists-elem {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each todo item */
+.main_todo_div {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.main_todo_div:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+/* List text */
+.main_todo_div li {
+  list-style: none;
+  font-size: 1.1rem;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+/* Delete button */
+.deleteBtn {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+  #inputValue {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
